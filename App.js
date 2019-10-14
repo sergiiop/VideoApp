@@ -8,6 +8,8 @@ import Header from './src/sections/components/header';
 import SuggestionList from './src/video/containers/suggestion-list';
 import API from './utils/api';
 import CategoryList from './src/video/containers/category-list';
+import Player from './src/player/containers/player';
+
 
 
 type Props = {};
@@ -29,16 +31,7 @@ class App extends Component<Props>{
     return (
       <Home>
       <Header />
-        <Video source={{uri:https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4'}}
-            style={{
-              position: 'absolute',
-              left: 0,
-              right: 0,
-              bottom: 0,
-              top: 0,
-              }}
-              resizeMode="contain"
-            />
+      <Player />
       <Text>buscador</Text>
       <Text>categoría</Text>
       <CategoryList
@@ -51,5 +44,6 @@ class App extends Component<Props>{
   );
 }
 };
+
 
 export default App;
