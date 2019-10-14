@@ -28,16 +28,25 @@ class App extends Component<Props>{
   render(){
     return (
       <Home>
-      <Header>
-      </Header>
+      <Header />
+        <Video source={{uri:https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4'}}
+            style={{
+              position: 'absolute',
+              left: 0,
+              right: 0,
+              bottom: 0,
+              top: 0,
+              }}
+              resizeMode="contain"
+            />
       <Text>buscador</Text>
       <Text>categoría</Text>
       <CategoryList
         list={this.state.categoryList}
-      />
+        />
       <SuggestionList
         list={this.state.suggestionList}
-      />
+        />
     </Home>
   );
 }
